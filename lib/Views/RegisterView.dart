@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../Customs/InputText.dart';
+import '../Customs/EKInputText.dart';
 
 
 class RegisterView extends StatelessWidget{

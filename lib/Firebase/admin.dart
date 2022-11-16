@@ -1,25 +1,25 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class PlatformAdmin {
+import 'Objects/Perfil.dart';
 
-  //int iANDROID_PLATFORM=0;
-  //int iIOS_PLATFORM=1;
-  //int iWEB_PLATFORM=2;
-  double SCREEN_WIDTH = 0;
-  double SCREEN_HEIGHT = 0;
-  late BuildContext context;
 
-  PlatformAdmin();
+class admin{
 
-  double getScreenWidth(BuildContext context){
-    SCREEN_WIDTH=MediaQuery.of(context).size.width;
-    return SCREEN_WIDTH;
+  FirebaseFirestore db = FirebaseFirestore.instance;
+
+  FBAdmin(){
+
   }
 
-  double getScreenHeight(BuildContext context){
-    SCREEN_HEIGHT=MediaQuery.of(context).size.height;
-    return SCREEN_HEIGHT;
-  }
+  Future<Perfil?> descargarPerfil(String? idPerfil) async {
+    final docRef = db.collection("perfiles").doc(idPerfil)
+        .withConverter(fromFirestore: Perfil.fromFirestore,
+      toFirestore: (Perfil perfil, _) => perfil.toFirestore(),
+    );
 
+
+    final docSnap = await docRef.get();
+    //DataHolder().perfil=docSnap.data()!;
+    return docSnap.data();
+  }
 }

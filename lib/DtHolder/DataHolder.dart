@@ -2,10 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import '../Firebase/Objects/Perfil.dart';
 import '../Firebase/admin.dart';
-import '../fb_objects/Perfil.dart';
-import '../fb_objects/Room.dart';
-import '../firebase/FbAdmin.dart';
-import '../platform/PlatformAdmin.dart';
 
 class DataHolder{
 
@@ -17,7 +13,7 @@ class DataHolder{
   String mensaje=" ";
   Perfil perfil= Perfil();
   //Room selectedChatRoom = Room();
-  FBAdmin fbAdmin = FBAdmin();
+  admin Admin = admin();
 
   double SCREEN_WIDTH=0;
   double SCREEN_HEIGHT=0;
@@ -27,7 +23,7 @@ class DataHolder{
   DataHolder._internal() {
     //text.value = "Lorem ipsum";
     mensaje = "Lorem ipsum";
-    platformAdmin=PlatformAdmin();
+    //platformAdmin=PlatformAdmin();
   }
 
   factory DataHolder(){
@@ -39,12 +35,12 @@ class DataHolder{
    * @return Funcion que espera la descarga del perfil y lo guardo en la clase DataHolder
    */
   Future<void> descargarMIPerfil() async{
-    perfil=await fbAdmin.descargarPerfil(FirebaseAuth.instance.currentUser?.uid) as Perfil;
+    perfil=await Admin.descargarPerfil(FirebaseAuth.instance.currentUser?.uid) as Perfil;
   }
 
 
   Future<void> descargarPerfilGenerico(String? idPerfil) async{
-    await fbAdmin.descargarPerfil(idPerfil) as Perfil;
+    await Admin.descargarPerfil(idPerfil) as Perfil;
   }
   bool isPerfilDownloaded(){
     return perfil!=null;

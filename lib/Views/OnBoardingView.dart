@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../Customs/InputText.dart';
+import '../Customs/EKInputText.dart';
 import '../Firebase/Objects/Perfil.dart';
 
 
@@ -32,9 +32,6 @@ class onBoardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //  inputNombre.setInitialValue("VALOR INICIAL NOMBRE!");
-
-
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('OnBoarding'),

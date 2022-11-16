@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Customs/InputText.dart';
+import '../Customs/EKInputText.dart';
 
 
 class LoginView extends StatelessWidget{
@@ -91,7 +91,7 @@ class LoginView extends StatelessWidget{
 
                       ElevatedButton.icon(
                         onPressed: (){
-                          Navigator.of(context).popAndPushNamed("/registerview");
+                          Navigator.of(context).popAndPushNamed("/Registro");
                         },
                         icon: Icon(Icons.accessibility, size: 18),
                         label: Text(' REGISTRAR'),
