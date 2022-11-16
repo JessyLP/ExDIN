@@ -18,7 +18,7 @@ class App extends StatelessWidget {
     MaterialApp materialAppMobile=const MaterialApp();
 
     return MaterialApp(
-      initialRoute: '/Login',
+      initialRoute: '/Splash',
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
