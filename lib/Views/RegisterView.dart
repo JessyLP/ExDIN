@@ -79,7 +79,7 @@ class RegisterView extends StatelessWidget{
                                   email: inputUser.getText(),
                                   password: inputPassword.getText(),
                                 );
-                                Navigator.of(context).popAndPushNamed("/loginview");
+                                Navigator.of(context).popAndPushNamed("/Login");
                               } on FirebaseAuthException catch (e) {
                                 if (e.code == 'weak-password') {
                                   print('La contraseña introducida es muy débil.');
@@ -98,7 +98,7 @@ class RegisterView extends StatelessWidget{
 
                       ElevatedButton(
                         onPressed: ( ){
-                          Navigator.of(context).popAndPushNamed("/loginview");
+                          Navigator.of(context).popAndPushNamed("/Login");
                         },
                         child: Text(' CANCELAR'),
                         style:ElevatedButton.styleFrom(

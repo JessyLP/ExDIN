@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
-class PlatformAdmin {
+class Platform{
 
   //int iANDROID_PLATFORM=0;
   //int iIOS_PLATFORM=1;
@@ -10,7 +10,7 @@ class PlatformAdmin {
   double SCREEN_HEIGHT = 0;
   late BuildContext context;
 
-  PlatformAdmin();
+  Platform();
 
   double getScreenWidth(BuildContext context){
     SCREEN_WIDTH=MediaQuery.of(context).size.width;

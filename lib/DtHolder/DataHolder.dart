@@ -1,3 +1,6 @@
+
+
+import 'package:ex_din/Views/Plataforma/Platform.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../Firebase/Objects/Perfil.dart';
@@ -18,12 +21,12 @@ class DataHolder{
   double SCREEN_WIDTH=0;
   double SCREEN_HEIGHT=0;
 
-  //late PlatformAdmin platformAdmin;
+  late Platform platformAdmin;
 
   DataHolder._internal() {
     //text.value = "Lorem ipsum";
     mensaje = "Lorem ipsum";
-    //platformAdmin=PlatformAdmin();
+    platformAdmin=Platform();
   }
 
   factory DataHolder(){

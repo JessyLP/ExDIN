@@ -1,4 +1,5 @@
 
+import 'package:ex_din/Views/SplashView.dart';
 import 'package:flutter/material.dart';
 
 import 'Views/LoginView.dart';
@@ -24,7 +25,9 @@ class App extends StatelessWidget {
       routes: {
         '/Login':(context) => LoginView(),
         '/Registro':(context) => RegisterView(),
-       // '/Home':(context) => HomeView(),
+        '/Splash':(context) => SplashView("assets/images/halloween1.jpg"),
+
+        // '/Home':(context) => HomeView(),
        // '/OnBoarding':(context) => const OnBoardingView(),
       },
     );

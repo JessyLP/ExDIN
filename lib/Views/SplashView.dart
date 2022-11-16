@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 import '../DtHolder/DataHolder.dart';
 
 
-class LogoWait extends StatefulWidget{
+class SplashView extends StatefulWidget{
   final String LogoPath;
-  const LogoWait(this.LogoPath, {super.key});
+  const SplashView(this.LogoPath, {super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _LogoWaitState();
+    return _SplashViewState();
   }
 }
 
-class _LogoWaitState extends State<LogoWait> {
+class _SplashViewState extends State<SplashView> {
 
   @override
   void initState() {
@@ -41,7 +41,7 @@ class _LogoWaitState extends State<LogoWait> {
       bool existe=await checkExistingProfile();
       if(existe){
         setState(() {
-          Navigator.of(context).popAndPushNamed("/Home");
+          Navigator.of(context).popAndPushNamed("/Login");
         });
       }
       else{
@@ -49,15 +49,12 @@ class _LogoWaitState extends State<LogoWait> {
           Navigator.of(context).popAndPushNamed("/OnBoarding");
         });
       }
-
-
-
     }
   }
 
   Future<bool> checkExistingProfile() async{
     String? idUser=FirebaseAuth.instance.currentUser?.uid;
-    print(idUser);
+    //print(idUser);
     FirebaseFirestore db = FirebaseFirestore.instance;
     final docRef = db.collection("perfiles").doc(idUser);
 
