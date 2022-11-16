@@ -3,7 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../Customs/InputText.dart';
-import '../Firebase/objects/Perfil.dart';
+import '../Firebase/Objects/Perfil.dart';
+
 
 
 
