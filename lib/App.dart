@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import 'Views/LoginView.dart';
+import 'Views/RegisterView.dart';
+
 
 
 class App extends StatelessWidget {
@@ -19,10 +22,10 @@ class App extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        /*'/Login':(context) => LoginView(),
+        '/Login':(context) => LoginView(),
         '/Registro':(context) => RegisterView(),
-        '/Home':(context) => HomeView(),
-        '/OnBoarding':(context) => const OnBoardingView(),*/
+       // '/Home':(context) => HomeView(),
+       // '/OnBoarding':(context) => const OnBoardingView(),
       },
     );
   }

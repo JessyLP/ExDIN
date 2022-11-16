@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import '../Customs/InputText.dart';
 
 
-class loginView extends StatelessWidget{
+class LoginView extends StatelessWidget{
 
-  loginView({Key? key}) : super(key:key);
+  LoginView({Key? key}) : super(key:key);
 
 
   InputText inputUser = InputText(
