@@ -29,10 +29,11 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void loadAllData() async{
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 2));
     //CARGAMOS TODOS LOS RECURSOS
 
     //if(FirebaseAuth.instance.currentUser==null){
+    print(DataHolder().perfil.uid);
     if(DataHolder().perfil.uid==null){
       setState(() {
         Navigator.of(context).popAndPushNamed("/Login");
@@ -68,7 +69,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     // TODO: implement build
     //DataHolder().platformAdmin.initDisplayData(context);
-    print("DEBUG: LA PLATAFORMA TIENE UNA ALTURA: "+DataHolder().platformAdmin.SCREEN_HEIGHT.toString());
+    //print("DEBUG: LA PLATAFORMA TIENE UNA ALTURA: "+DataHolder().platformAdmin.SCREEN_HEIGHT.toString());
 
     return Scaffold(
       body: Center(
