@@ -14,8 +14,6 @@ import '../Firebase/Objects/Room.dart';
 
 class HomeView extends StatefulWidget{
 
-
-
   @override
   State<StatefulWidget> createState() {
     return _HomeViewState();
