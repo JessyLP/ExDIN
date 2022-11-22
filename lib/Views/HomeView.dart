@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../DtHolder/DataHolder.dart';
 import '../Firebase/Objects/Perfil.dart';
+import '../Firebase/Objects/Room.dart';
 
 
 
@@ -26,16 +27,16 @@ class _HomeViewState extends State<HomeView>{
 
   FirebaseFirestore db=FirebaseFirestore.instance;
   String nombre="AQUI IRA EL NOMBRE";
- // List<Room> chatRooms = [];
+  List<Room> chatRooms = [];
 
 
   @override
   void initState(){
     super.initState();
-  //  getRoomsList();
+    getRoomsList();
 
   }
-/*
+
   void getProfile() async{
     final ref = db.collection("perfiles").doc(FirebaseAuth.instance.currentUser?.uid).withConverter(
       fromFirestore: Perfil.fromFirestore,
@@ -49,9 +50,9 @@ class _HomeViewState extends State<HomeView>{
       print("No such document.");
     }
 
-  }*/
+  }
 
-/*
+
   void actualizarNombre()async{
     String? idUser=FirebaseAuth.instance.currentUser?.uid;
     final docRef = db.collection("perfiles").
@@ -63,17 +64,17 @@ class _HomeViewState extends State<HomeView>{
     DataHolder().perfil=docSnap.data()!;
 
     if (DataHolder().perfil != null) {
-      print(DataHolder().perfil.edad);
+      //print(DataHolder().perfil.edad);
       setState(() {
         nombre=DataHolder().perfil.name!;
       });
     } else {
       print("No such document.");
     }
-  }*/
+  }
 
 
-/*
+
   void getRoomsList() async{
     //String Query = SELECT * FROM ROOMS WHERE members>50
     final docRef = db.collection("rooms").where("members",isLessThan: 40).orderBy("members",descending: true).
@@ -88,7 +89,7 @@ class _HomeViewState extends State<HomeView>{
       }
     });
 
-  }*/
+  }
 
 
   void listItemShortClicked(int index){
@@ -98,10 +99,6 @@ class _HomeViewState extends State<HomeView>{
 
   @override
   Widget build(BuildContext context) {
-
-
-
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rooms'),

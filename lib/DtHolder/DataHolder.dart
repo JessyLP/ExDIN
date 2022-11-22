@@ -4,7 +4,7 @@ import 'package:ex_din/Views/Plataforma/Platform.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../Firebase/Objects/Perfil.dart';
-import '../Firebase/Objects/Rooms.dart';
+import '../Firebase/Objects/Room.dart';
 import '../Firebase/admin.dart';
 
 class DataHolder{
