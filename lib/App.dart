@@ -25,7 +25,7 @@ class App extends StatelessWidget {
       routes: {
         '/Login':(context) => LoginView(),
         '/Registro':(context) => RegisterView(),
-        '/Splash':(context) => SplashView("assets/images/dona.png"),
+        '/Splash':(context) => SplashView("assets/images/dona1.png"),
 
         // '/Home':(context) => HomeView(),
        // '/OnBoarding':(context) => const OnBoardingView(),
