@@ -18,14 +18,14 @@ class App extends StatelessWidget {
     MaterialApp materialAppMobile=const MaterialApp();
 
     return MaterialApp(
-      initialRoute: '/Splash',
+      initialRoute: '/Login',
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
       routes: {
         '/Login':(context) => LoginView(),
         '/Registro':(context) => RegisterView(),
-        '/Splash':(context) => SplashView("assets/images/halloween1.jpg"),
+        '/Splash':(context) => SplashView("assets/images/dona.png"),
 
         // '/Home':(context) => HomeView(),
        // '/OnBoarding':(context) => const OnBoardingView(),

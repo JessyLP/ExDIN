@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import '../DtHolder/DataHolder.dart';
@@ -76,10 +75,10 @@ class _SplashViewState extends State<SplashView> {
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(widget.LogoPath),width: DataHolder().platformAdmin.SCREEN_WIDTH,),
-            SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
+            Image(image: AssetImage(widget.LogoPath),/*width: DataHolder().platformAdmin.SCREEN_WIDTH,*/),
+            //SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
             Text("Loading...",style: TextStyle(fontSize: DataHolder().platformAdmin.SCREEN_HEIGHT/20)),
-            SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
+            //SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
             const CircularProgressIndicator(
               semanticsLabel: 'Circular progress indicator',
             )
