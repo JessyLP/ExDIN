@@ -2,9 +2,11 @@
 import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:ex_din/Views/Grid/GridItem.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../DtHolder/DataHolder.dart';
 import '../Firebase/Objects/Perfil.dart';
 
 
@@ -24,13 +26,13 @@ class _HomeViewState extends State<HomeView>{
 
   FirebaseFirestore db=FirebaseFirestore.instance;
   String nombre="AQUI IRA EL NOMBRE";
-  List<Room> chatRooms = [];
+ // List<Room> chatRooms = [];
 
 
   @override
   void initState(){
     super.initState();
-    getRoomsList();
+  //  getRoomsList();
 
   }
 /*
@@ -87,14 +89,12 @@ class _HomeViewState extends State<HomeView>{
     });
 
   }*/
-  /*
+
 
   void listItemShortClicked(int index){
-    print("DEBUG: "+index.toString());
-    print("DEBUG: "+chatRooms[index].name!);
     DataHolder().selectedChatRoom=chatRooms[index];
     Navigator.of(context).pushNamed("/ChatView");
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -115,9 +115,9 @@ class _HomeViewState extends State<HomeView>{
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
             ),
-            itemCount: chatRooms.length,
+           // itemCount: chatRooms.length,
             itemBuilder: (BuildContext context, int index) {
-            //  return RoomCard(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+            return GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
 
             }
         ),

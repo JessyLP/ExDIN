@@ -4,6 +4,7 @@ import 'package:ex_din/Views/Plataforma/Platform.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../Firebase/Objects/Perfil.dart';
+import '../Firebase/Objects/Rooms.dart';
 import '../Firebase/admin.dart';
 
 class DataHolder{
@@ -15,7 +16,7 @@ class DataHolder{
 
   String mensaje=" ";
   Perfil perfil= Perfil();
-  //Room selectedChatRoom = Room();
+  Room selectedChatRoom = Room();
   admin Admin = admin();
 
   double SCREEN_WIDTH=0;
