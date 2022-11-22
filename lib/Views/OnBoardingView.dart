@@ -8,8 +8,8 @@ import '../Firebase/Objects/Perfil.dart';
 
 
 
-class onBoardingView extends StatelessWidget {
-  onBoardingView({Key? key}) : super(key: key);
+class OnBoardingView extends StatelessWidget {
+  OnBoardingView({Key? key}) : super(key: key);
 
   InputText Nombre = InputText( titulo: "Nombre",);
   InputText Pais = InputText(titulo: "Pais",);

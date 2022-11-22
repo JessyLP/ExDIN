@@ -29,12 +29,12 @@ class _SplashViewState extends State<SplashView> {
 
   void loadAllData() async{
     await Future.delayed(Duration(seconds: 2));
-    //CARGAMOS TODOS LOS RECURSOS
+
 
     //if(FirebaseAuth.instance.currentUser==null){
-    print(DataHolder().perfil.uid);
     if(DataHolder().perfil.uid==null){
       setState(() {
+        print("A");
         Navigator.of(context).popAndPushNamed("/Login");
       });
     }
@@ -42,11 +42,13 @@ class _SplashViewState extends State<SplashView> {
       bool existe=await checkExistingProfile();
       if(existe){
         setState(() {
+          print("B");
           Navigator.of(context).popAndPushNamed("/Login");
         });
       }
       else{
         setState(() {
+          print("C");
           Navigator.of(context).popAndPushNamed("/OnBoarding");
         });
       }
@@ -55,7 +57,7 @@ class _SplashViewState extends State<SplashView> {
 
   Future<bool> checkExistingProfile() async{
     String? idUser=FirebaseAuth.instance.currentUser?.uid;
-    //print(idUser);
+    print(idUser);
     FirebaseFirestore db = FirebaseFirestore.instance;
     final docRef = db.collection("perfiles").doc(idUser);
 
@@ -67,18 +69,13 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    //DataHolder().platformAdmin.initDisplayData(context);
-    //print("DEBUG: LA PLATAFORMA TIENE UNA ALTURA: "+DataHolder().platformAdmin.SCREEN_HEIGHT.toString());
 
     return Scaffold(
       body: Center(
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(widget.LogoPath),/*width: DataHolder().platformAdmin.SCREEN_WIDTH,*/),
-            //SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
-            Text("Loading...",style: TextStyle(fontSize: DataHolder().platformAdmin.SCREEN_HEIGHT/20)),
-            //SizedBox(height: DataHolder().platformAdmin.SCREEN_HEIGHT/30),
+            Image(image: AssetImage(widget.LogoPath)),
             const CircularProgressIndicator(
               semanticsLabel: 'Circular progress indicator',
             )
