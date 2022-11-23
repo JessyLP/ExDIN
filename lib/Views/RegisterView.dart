@@ -9,14 +9,14 @@ class RegisterView extends StatelessWidget{
   RegisterView({Key? key}) : super(key:key);
 
 
-  InputText inputUser = InputText(
+  EKInputText inputUser = EKInputText(
     titulo: "Escribe tu correo:",
     ayuda:"ejemplo@ejemplo.com",);
-  InputText inputPassword = InputText(
+  EKInputText inputPassword = EKInputText(
     titulo: "Escribe tu contraseña:",
     ayuda:"Mayor de 7 caracteres.",
     blIsPsswd: true,);
-  InputText inputPasswordValidada = InputText(
+  EKInputText inputPasswordValidada = EKInputText(
     titulo: "Escribe tu contraseña:",
     ayuda:"Repite la contraseña.",
     blIsPsswd: true,);

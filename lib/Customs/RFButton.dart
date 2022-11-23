@@ -30,8 +30,8 @@ class RFButton extends StatelessWidget {
               fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(22.0),
-          child: Text("BUTTON"),
+          padding: const EdgeInsets.all(18.0),
+          child: Text("ACEPTAR"),
         ),
       ),
       // ),

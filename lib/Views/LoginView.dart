@@ -9,10 +9,10 @@ class LoginView extends StatelessWidget{
   LoginView({Key? key}) : super(key:key);
 
 
-  InputText inputUser = InputText(
+  EKInputText inputUser = EKInputText(
     titulo: "Correo:",
     ayuda:"ejemplo@gmail.com",);
-  InputText inputPassword = InputText(
+  EKInputText inputPassword = EKInputText(
     titulo: "Password:",
     ayuda:"Mayor de 7 caracteres",
     blIsPsswd: true,);

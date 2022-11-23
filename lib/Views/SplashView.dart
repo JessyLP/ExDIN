@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     //FirebaseAuth.instance.signOut();
     loadAllData();
@@ -30,11 +30,9 @@ class _SplashViewState extends State<SplashView> {
   void loadAllData() async{
     await Future.delayed(Duration(seconds: 2));
 
-
     //if(FirebaseAuth.instance.currentUser==null){
     if(DataHolder().perfil.uid==null){
       setState(() {
-        print("A");
         Navigator.of(context).popAndPushNamed("/Login");
       });
     }
@@ -42,13 +40,11 @@ class _SplashViewState extends State<SplashView> {
       bool existe=await checkExistingProfile();
       if(existe){
         setState(() {
-          print("B");
-          Navigator.of(context).popAndPushNamed("/Login");
+          Navigator.of(context).popAndPushNamed("/Home");
         });
       }
       else{
         setState(() {
-          print("C");
           Navigator.of(context).popAndPushNamed("/OnBoarding");
         });
       }

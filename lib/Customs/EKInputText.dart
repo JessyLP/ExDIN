@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class InputText extends StatelessWidget {
+class EKInputText extends StatelessWidget {
 
   final String titulo;
   final String ayuda;
@@ -8,7 +8,7 @@ class InputText extends StatelessWidget {
 
 
 
-  InputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false}) : super(key:key);
+  EKInputText({Key? key,  this.titulo="",  this.ayuda="",  this.blIsPsswd=false}) : super(key:key);
   final TextEditingController myController = TextEditingController();
 
 

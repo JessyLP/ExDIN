@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:ex_din/Customs/RFButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -11,12 +12,12 @@ import '../Firebase/Objects/Perfil.dart';
 class OnBoardingView extends StatelessWidget {
   OnBoardingView({Key? key}) : super(key: key);
 
-  InputText Nombre = InputText( titulo: "Nombre",);
-  InputText Pais = InputText(titulo: "Pais",);
-  InputText Ciudad = InputText(titulo: "Ciudad",);
+  EKInputText Nombre = EKInputText( titulo: "Nombre",);
+  EKInputText Pais = EKInputText(titulo: "Pais",);
+  EKInputText Ciudad = EKInputText(titulo: "Ciudad",);
   FirebaseFirestore db=FirebaseFirestore.instance;
 
-  void btn1Pressed() async {
+  void btn1Pressed(BuildContext context) async {
     Perfil perfil= new Perfil(
         name: Nombre.getText(),
         country: Pais.getText(),
@@ -27,15 +28,16 @@ class OnBoardingView extends StatelessWidget {
         .doc(FirebaseAuth.instance.currentUser?.uid)
         .set(perfil.toFirestore())
         .onError((e, _) => print("Error writing document: $e"));
+    Navigator.of(context).popAndPushNamed("/Home");
+
   }
 
   @override
   Widget build(BuildContext context) {
-    //  inputNombre.setInitialValue("VALOR INICIAL NOMBRE!");
     return Scaffold(
       appBar: AppBar(
         title: const Text('OnBoarding'),
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.black,
       ),
       body: Center(
         child: Column(
@@ -48,15 +50,17 @@ class OnBoardingView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 OutlinedButton(
-                  onPressed: btn1Pressed,
-                  child: Text("ACEPTAR"),
+                  onPressed:(){
+                    btn1Pressed(context);
+                  },
+                  child: Text("ACEPTAR",style: TextStyle(backgroundColor: Colors.purple,color: Colors.white)),
                 ),
                 OutlinedButton(
                   onPressed: () {
                     // Respond to button press
                     print("PRESIONASTES BOTON 2");
                   },
-                  child: Text("CANCELAR"),
+                  child: Text("CANCELAR",style: TextStyle(backgroundColor: Colors.purple,color: Colors.white)),
                 )
               ],
             )
@@ -64,7 +68,7 @@ class OnBoardingView extends StatelessWidget {
 
         ),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.grey,
     );
   }
 }
