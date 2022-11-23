@@ -18,29 +18,6 @@ class LoginView extends StatelessWidget{
     blIsPsswd: true,);
 
 
-  void btn1Pressed(BuildContext context) async{
-    /* print(input1.geText());
-     print(input2.geText());*/
-    try {
-      final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: inputUser.getText(),
-        password: inputPassword.getText(),
-      );Navigator.of(context).popAndPushNamed("/OnBoarding");
-    } on FirebaseAuthException catch (e) {
-      print("------------> ERROR AL CREAR EL USUARIO.");
-      if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
-      } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
-      }
-    } catch (e) {
-      print(e);
-    }
-    print("USUARIO CREADO CORRECTAMENTE");
-  }
-
-
-
   @override
   Widget build(BuildContext context) {
 

@@ -17,7 +17,6 @@ class GridItem extends StatelessWidget{
       onTap: () {
         onShortClick(index);
       },
-
       child: Card(
         color: Colors.cyan,
         child:Column(
@@ -27,7 +26,6 @@ class GridItem extends StatelessWidget{
             Text(Name)
           ],
         ),
-
       ),
     );
   }
