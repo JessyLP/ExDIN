@@ -17,19 +17,21 @@ class RFButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      //padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.0),
       textColor: Colors.white,
       splashColor: Colors.greenAccent,
       elevation: 8.0,
       child: Container(
+        width: 100,
+        height: 100,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/dona1.png'),
+              image: AssetImage('assets/images/dona.png'),
               fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text("button"),
+          padding: const EdgeInsets.all(22.0),
+          child: Text("BUTTON"),
         ),
       ),
       // ),

@@ -28,7 +28,9 @@ class _ItemGridState extends State<ItemGrid>{
       body:Center(
           child:
               Column(
-                  children: [
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                children: [
                      Text("Press the button"),
                     RFButton(),
                   ],
