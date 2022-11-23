@@ -120,10 +120,11 @@ class _HomeViewState extends State<HomeView>{
                 mini: true,
 
                 onPressed: () {
-                    print("Hi");
-                    // GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+                  itemBuilder: (BuildContext context, int index) {
+                    new GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+                  };
                 },
-                child: Icon(Icons.add),
+                child: Icon(Icons.add,size: 20),
               ),
         );
       }
