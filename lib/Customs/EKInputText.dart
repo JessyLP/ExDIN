@@ -29,7 +29,7 @@ class InputText extends StatelessWidget {
       enableSuggestions: !blIsPsswd,
       autocorrect: !blIsPsswd,
       decoration:  InputDecoration(
-      icon:ImageIcon(AssetImage('assets/images/dona1.png')),
+      icon:Image(image:AssetImage('assets/images/dona.png'),width: 30),
         labelText: titulo,
         labelStyle: TextStyle(
           color: Color(0xFF6B11A4),

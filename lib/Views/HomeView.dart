@@ -1,5 +1,4 @@
 
-import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ex_din/Views/Grid/GridItem.dart';
@@ -91,7 +90,7 @@ class _HomeViewState extends State<HomeView>{
     print("DEBUG: "+index.toString());
     print("DEBUG: "+chatRooms[index].name!);
     DataHolder().selectedChatRoom=chatRooms[index];
-   // Navigator.of(context).pushNamed("/ChatView");
+   Navigator.of(context).pushNamed("/Grid");
   }
 
   @override
@@ -104,20 +103,29 @@ class _HomeViewState extends State<HomeView>{
       backgroundColor: Colors.blueGrey,
       body: Center(
         child:
-        GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 1,
-            ),
-            itemCount: chatRooms.length,
-            itemBuilder: (BuildContext context, int index) {
-            return GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-            }
-        ),
-
-
+              GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                ),
+                itemCount: chatRooms.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+                 }
+              ),
       ),
     );
   }
 
+  /*
+
+  * FloatingActionButton(
+              backgroundColor: const Color(0xff03dac6),
+              foregroundColor: Colors.black,
+              mini: true,
+
+              onPressed: () {
+                // Respond to button press
+              },
+              child: Icon(Icons.add),*/
 
 }

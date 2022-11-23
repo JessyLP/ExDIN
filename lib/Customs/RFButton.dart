@@ -9,27 +9,15 @@ class RFButton extends StatelessWidget {
 
 
   final TextEditingController myController = TextEditingController();
-  //final String LogoPath;
 
 
- /* void fondo(){
 
-    decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/images/dona1.png'),
-            fit: BoxFit.cover
-        )
-    );
-
-    backgroundColor: Colors./*cyan*/transparent;
-
-  }*/
 
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: EdgeInsets.all(8.0),
+      //padding: EdgeInsets.all(8.0),
       textColor: Colors.white,
       splashColor: Colors.greenAccent,
       elevation: 8.0,
@@ -41,12 +29,11 @@ class RFButton extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text("SIGN OUT"),
+          child: Text("button"),
         ),
       ),
       // ),
       onPressed: () {
-        print('Tapped');
       },
     );
   }
