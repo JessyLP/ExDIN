@@ -57,11 +57,10 @@ class _HomeViewState extends State<HomeView>{
         toFirestore: (Perfil perfil, _) => perfil.toFirestore());
 
     final docSnap = await docRef.get();
-    //final perfilUsuario = docSnap.data(); // Convert to Perfil object
+    final perfilUsuario = docSnap.data(); // Convert to Perfil object
     DataHolder().perfil=docSnap.data()!;
 
     if (DataHolder().perfil != null) {
-      //print(DataHolder().perfil.edad);
       setState(() {
         nombre=DataHolder().perfil.name!;
       });
@@ -73,7 +72,6 @@ class _HomeViewState extends State<HomeView>{
 
 
   void getRoomsList() async{
-    //String Query = SELECT * FROM ROOMS WHERE members>50
     final docRef = db.collection("rooms").where("members",isLessThan: 40).orderBy("members",descending: true).
     withConverter(fromFirestore: Room.fromFirestore,
         toFirestore: (Room room, _) => room.toFirestore());
@@ -90,31 +88,32 @@ class _HomeViewState extends State<HomeView>{
 
 
   void listItemShortClicked(int index){
+    print("DEBUG: "+index.toString());
+    print("DEBUG: "+chatRooms[index].name!);
     DataHolder().selectedChatRoom=chatRooms[index];
-    Navigator.of(context).pushNamed("/ChatView");
+   // Navigator.of(context).pushNamed("/ChatView");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rooms'),
+        title: const Text('Home'),
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.blueGrey,
       body: Center(
         child:
-
         GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+              crossAxisCount: 1,
             ),
-           // itemCount: chatRooms.length,
+            itemCount: chatRooms.length,
             itemBuilder: (BuildContext context, int index) {
             return GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-
             }
         ),
+
 
       ),
     );
