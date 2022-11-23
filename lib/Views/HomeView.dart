@@ -113,19 +113,18 @@ class _HomeViewState extends State<HomeView>{
                  }
               ),
       ),
-    );
-  }
+      bottomSheet:
+              FloatingActionButton(
+                backgroundColor:  Color(0xff03dac6),
+                //foregroundColor: Colors.black,
+                mini: true,
 
-  /*
-
-  * FloatingActionButton(
-              backgroundColor: const Color(0xff03dac6),
-              foregroundColor: Colors.black,
-              mini: true,
-
-              onPressed: () {
-                // Respond to button press
-              },
-              child: Icon(Icons.add),*/
-
+                onPressed: () {
+                    print("Hi");
+                    // GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
+                },
+                child: Icon(Icons.add),
+              ),
+        );
+      }
 }
