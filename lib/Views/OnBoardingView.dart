@@ -53,14 +53,14 @@ class OnBoardingView extends StatelessWidget {
                   onPressed:(){
                     btn1Pressed(context);
                   },
-                  child: Text("ACEPTAR",style: TextStyle(backgroundColor: Colors.purple,color: Colors.white)),
+                  child: Text("ACEPTAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,), backgroundColor: Colors.black),
                 ),
                 OutlinedButton(
                   onPressed: () {
                     // Respond to button press
                     print("PRESIONASTES BOTON 2");
                   },
-                  child: Text("CANCELAR",style: TextStyle(backgroundColor: Colors.purple,color: Colors.white)),
+                  child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
                 )
               ],
             )
@@ -68,7 +68,7 @@ class OnBoardingView extends StatelessWidget {
 
         ),
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blue,
     );
   }
 }
