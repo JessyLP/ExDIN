@@ -1,4 +1,5 @@
 
+import 'package:ex_din/Views/Formulario.dart';
 import 'package:ex_din/Views/OnBoardingView.dart';
 import 'package:ex_din/Views/SplashView.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
         '/OnBoarding':(context) => OnBoardingView(),
         '/Home':(context) => HomeView(),
         '/Grid':(context) => ItemGrid(),
+        '/form':(context) => Formulario(),
 
       },
     );

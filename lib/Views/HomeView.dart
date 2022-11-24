@@ -113,16 +113,13 @@ class _HomeViewState extends State<HomeView>{
                  }
               ),
       ),
-      bottomSheet:
+      floatingActionButton:
               FloatingActionButton(
                 backgroundColor:  Color(0xff03dac6),
                 //foregroundColor: Colors.black,
                 mini: true,
-
                 onPressed: () {
-                  itemBuilder: (BuildContext context, int index) {
-                    new GridItem(ImgUrl:chatRooms[index].image!,Name :chatRooms[index].name!, onShortClick: listItemShortClicked,index: index,);
-                  };
+                  Navigator.of(context).pushNamed("/form");
                 },
                 child: Icon(Icons.add,size: 20),
               ),

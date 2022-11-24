@@ -31,7 +31,7 @@ class RFButton extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(18.0),
-          child: Text("ACEPTAR"),
+          child: Text("DONA"),
         ),
       ),
       // ),

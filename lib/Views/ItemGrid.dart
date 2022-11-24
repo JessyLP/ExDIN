@@ -27,15 +27,42 @@ class _ItemGridState extends State<ItemGrid>{
       ),
       body:Center(
           child:
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  ListView(
+                    padding: const EdgeInsets.all(10),
+                    children: <Widget>[
+                      Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/pescado.jpg'),
+                              fit: BoxFit.cover),
+                        ),
+                        child: const Center(child: Text('Pescado')),
+                      ),
+                      Text(""),
+                      Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/carne.jpg'),
+                              fit: BoxFit.cover),
+                        ),
+                        child: const Center(child: Text('Carne')),
+                      ),
+                      Text(""),
+                      Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/veg.jpg'),
+                              fit: BoxFit.cover),
+                        ),
+                        child: const Center(child: Text('Vegetales')),
+                      ),
+                    ],
+                  )
 
-                children: [
-                     Text("Press the button"),
-                    RFButton(),
-                  ],
         )
-      ),
-    );
+      );
   }
 }
