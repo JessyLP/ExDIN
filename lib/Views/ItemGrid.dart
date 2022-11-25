@@ -22,9 +22,11 @@ class _ItemGridState extends State<ItemGrid>{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Item"),
-      ),
+        appBar: AppBar(
+          title: const Text('TIPOS'),
+          backgroundColor: Colors.deepPurple,
+        ),
+        backgroundColor: Colors.cyan,
       body:Center(
           child:
                   ListView(

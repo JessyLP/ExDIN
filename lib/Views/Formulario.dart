@@ -9,8 +9,8 @@ import '../Firebase/Objects/Room.dart';
 class Formulario extends StatelessWidget {
   Formulario({Key? key}) : super(key: key);
 
-  EKInputText Nombre = EKInputText( titulo: "Nombre",);
-  EKInputText Imagen = EKInputText(titulo: "Imagen",);
+  EKInputText Nombre = EKInputText( titulo: "Nombre",ayuda: "De la coleccion nueva.",);
+  EKInputText Imagen = EKInputText(titulo: "Imagen",ayuda: "Tipo: URL.",);
   EKInputText Miembros = EKInputText(titulo: "Miembros",);
   FirebaseFirestore db=FirebaseFirestore.instance;
 
@@ -32,8 +32,8 @@ class Formulario extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Formulario'),
-        backgroundColor: Colors.black,
+        title: const Text('FORMULARIO'),
+        backgroundColor: Colors.deepPurple,
       ),
       body: Center(
         child: Column(
@@ -65,7 +65,7 @@ class Formulario extends StatelessWidget {
 
         ),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.cyan,
     );
   }
 }

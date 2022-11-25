@@ -18,7 +18,7 @@ class GridItem extends StatelessWidget{
         onShortClick(index);
       },
       child: Card(
-        color: Colors.cyan,
+        color: Colors.purple[700],
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

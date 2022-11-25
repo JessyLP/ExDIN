@@ -25,7 +25,6 @@ class LoginView extends StatelessWidget{
     return MaterialApp(
         home: Container(
           child: Scaffold(
-
             appBar: AppBar(
               title: const Text(' LOGIN  '),
               titleTextStyle: TextStyle(fontWeight: FontWeight.bold ),

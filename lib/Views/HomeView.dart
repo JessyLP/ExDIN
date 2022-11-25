@@ -98,9 +98,9 @@ class _HomeViewState extends State<HomeView>{
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.deepPurple,
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.cyan,
       body: Center(
         child:
               GridView.builder(
@@ -115,7 +115,8 @@ class _HomeViewState extends State<HomeView>{
       ),
       floatingActionButton:
               FloatingActionButton(
-                backgroundColor:  Color(0xff03dac6),
+                backgroundColor:  Colors.purple[400],
+                hoverColor: Colors.white,
                 //foregroundColor: Colors.black,
                 mini: true,
                 onPressed: () {
