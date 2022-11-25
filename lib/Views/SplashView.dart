@@ -72,7 +72,7 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image(image: AssetImage(widget.LogoPath)),
-            Text("Donut App"),
+            Text("Donut App",style: TextStyle(height: 10,color: Colors.white)),
             const CircularProgressIndicator(
               semanticsLabel: 'Circular progress indicator',
             )
