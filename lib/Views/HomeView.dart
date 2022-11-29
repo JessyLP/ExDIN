@@ -22,13 +22,14 @@ class HomeView extends StatefulWidget{
 class _HomeViewState extends State<HomeView>{
 
   FirebaseFirestore db=FirebaseFirestore.instance;
-  String nombre="AQUI IRA EL NOMBRE";
+  String nombre="NOMBRE";
   List<Room> chatRooms = [];
 
 
   @override
   void initState(){
     super.initState();
+    getProfile();
     getRoomsList();
 
   }
@@ -56,7 +57,6 @@ class _HomeViewState extends State<HomeView>{
         toFirestore: (Perfil perfil, _) => perfil.toFirestore());
 
     final docSnap = await docRef.get();
-    final perfilUsuario = docSnap.data(); // Convert to Perfil object
     DataHolder().perfil=docSnap.data()!;
 
     if (DataHolder().perfil != null) {
@@ -71,7 +71,7 @@ class _HomeViewState extends State<HomeView>{
 
 
   void getRoomsList() async{
-    final docRef = db.collection("rooms").where("members",isLessThan: 40).orderBy("members",descending: true).
+    final docRef = db.collection("rooms").
     withConverter(fromFirestore: Room.fromFirestore,
         toFirestore: (Room room, _) => room.toFirestore());
 
@@ -105,7 +105,7 @@ class _HomeViewState extends State<HomeView>{
         child:
               GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
+                  crossAxisCount: 2,
                 ),
                 itemCount: chatRooms.length,
                 itemBuilder: (BuildContext context, int index) {

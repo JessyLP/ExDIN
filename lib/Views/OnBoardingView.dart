@@ -37,7 +37,7 @@ class OnBoardingView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('OnBoarding'),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.deepPurple,
       ),
       body: Center(
         child: Column(
@@ -58,7 +58,7 @@ class OnBoardingView extends StatelessWidget {
                 OutlinedButton(
                   onPressed: () {
                     // Respond to button press
-                    print("PRESIONASTES BOTON 2");
+                    Navigator.of(context).popAndPushNamed("/Login");
                   },
                   child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
                 )
@@ -68,7 +68,7 @@ class OnBoardingView extends StatelessWidget {
 
         ),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.cyan,
     );
   }
 }

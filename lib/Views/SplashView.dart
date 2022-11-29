@@ -75,6 +75,7 @@ class _SplashViewState extends State<SplashView> {
             Text("Donut App",style: TextStyle(height: 10,color: Colors.white)),
             const CircularProgressIndicator(
               semanticsLabel: 'Circular progress indicator',
+              color: Colors.white,
             )
           ],
         ),
