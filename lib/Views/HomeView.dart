@@ -71,7 +71,7 @@ class _HomeViewState extends State<HomeView>{
 
 
   void getRoomsList() async{
-    final docRef = db.collection("rooms").
+    final docRef = db.collection("rooms").orderBy("members",descending: true).
     withConverter(fromFirestore: Room.fromFirestore,
         toFirestore: (Room room, _) => room.toFirestore());
 
@@ -105,7 +105,7 @@ class _HomeViewState extends State<HomeView>{
         child:
               GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 1,
                 ),
                 itemCount: chatRooms.length,
                 itemBuilder: (BuildContext context, int index) {
