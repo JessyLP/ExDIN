@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../Customs/EKInputText.dart';
+import '../Customs/RFButton.dart';
 import '../Firebase/Objects/Room.dart';
 
 
@@ -58,7 +59,8 @@ class Formulario extends StatelessWidget {
 
                   },
                   child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
-                )
+                ),
+                RFButton(),
               ],
             )
           ],
