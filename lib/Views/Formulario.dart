@@ -38,8 +38,11 @@ class Formulario extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Padding(padding: EdgeInsets.all(30)),
+            RFButton(),
+            Padding(padding: EdgeInsets.all(40)),
             Nombre,
             Imagen,
             Miembros,
@@ -60,7 +63,7 @@ class Formulario extends StatelessWidget {
                   },
                   child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
                 ),
-                RFButton(),
+
               ],
             )
           ],
