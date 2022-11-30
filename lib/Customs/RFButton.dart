@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 class RFButton extends StatelessWidget {
 
-  final Icon icono;
 
 
-  RFButton({Key? key, required this.icono,}) : super(key:key);
+
+  RFButton({Key? key,}) : super(key:key);
 
 
   final TextEditingController myController = TextEditingController();

@@ -19,7 +19,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/Splash',
+      initialRoute: '/OnBoarding',
       theme: ThemeData(
         brightness: Brightness.dark,
       ),

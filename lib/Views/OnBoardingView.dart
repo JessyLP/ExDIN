@@ -61,7 +61,8 @@ class OnBoardingView extends StatelessWidget {
                     Navigator.of(context).popAndPushNamed("/Login");
                   },
                   child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
-                )
+                ),
+                RFButton(),
               ],
             )
           ],
