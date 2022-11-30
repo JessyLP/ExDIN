@@ -21,8 +21,8 @@ class RFButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       padding: EdgeInsets.all(8.0),
-      textColor: Colors.white,
-      splashColor: Colors.greenAccent,
+      textColor: Colors.black,
+      splashColor: Colors.purple,
       elevation: 8.0,
       child: Container(
         width: 80,
@@ -31,10 +31,15 @@ class RFButton extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage('assets/images/homer1.png'),
               fit: BoxFit.cover),
+          border: Border(bottom: BorderSide(color: Colors.black),
+              top: BorderSide(color: Colors.blue),
+              left: BorderSide(color: Colors.blue),
+              right: BorderSide(color: Colors.blue)),
+
         ),
         child: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Text("DONA"),
+          padding: const EdgeInsets.all(0.0),
+          child: Text("press"),
         ),
       ),
 
