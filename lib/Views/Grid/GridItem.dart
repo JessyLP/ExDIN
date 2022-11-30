@@ -22,8 +22,10 @@ class GridItem extends StatelessWidget{
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(ImgUrl),
-            Text(Name)
+            Image.network(ImgUrl,height: 300,width: 350),
+            Divider(color: Colors.black,height: 2,thickness: 2,),
+            Padding(padding: EdgeInsets.all(4)),
+            Text(Name),
           ],
         ),
       ),
