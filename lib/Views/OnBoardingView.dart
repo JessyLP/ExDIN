@@ -62,6 +62,7 @@ class OnBoardingView extends StatelessWidget {
                   },
                   child: Text("CANCELAR"),style:OutlinedButton.styleFrom(primary: Colors.white, textStyle: TextStyle(fontSize: 20,),backgroundColor: Colors.black),
                 ),
+                Text("\n"),
                 RFButton(),
               ],
             )

@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class RFButton extends StatelessWidget {
 
@@ -24,8 +25,8 @@ class RFButton extends StatelessWidget {
       splashColor: Colors.greenAccent,
       elevation: 8.0,
       child: Container(
-        width: 100,
-        height: 100,
+        width: 80,
+        height: 80,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/homer1.png'),
@@ -36,8 +37,16 @@ class RFButton extends StatelessWidget {
           child: Text("DONA"),
         ),
       ),
-      // ),
+
       onPressed: () {
+        Fluttertoast.showToast(
+            msg: "D'OH",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
       },
     );
   }
