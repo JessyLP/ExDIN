@@ -115,7 +115,7 @@ class _HomeViewState extends State<HomeView>{
       ),
       floatingActionButton:
               FloatingActionButton(
-                backgroundColor:  Colors.purple[400],
+                backgroundColor:  Colors.purpleAccent[100],
                 hoverColor: Colors.white,
                 //foregroundColor: Colors.black,
                 mini: true,
